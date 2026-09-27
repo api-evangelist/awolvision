@@ -1,23 +1,76 @@
 aid: awolvision
+
 name: Awolvision
-description: 'Awolvision is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: http://awolvision.com/cdn/shop/files/AWOL_LOGO-150x150.png?v=1780293093
+
+description: 'Awolvision designs and sells premium home theater projectors and accessories, offering 4K laser UST projectors, high‑gain screens, and related solutions for cinematic home entertainment. The company operates an e‑commerce site showcasing product lines like Aetherion, LuxVision, and Valerion, providing detailed specs, purchase options, and support resources for consumers and dealers.'
+
 url: https://raw.githubusercontent.com/api-evangelist/awolvision/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-27 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-27'
+
 modified: '2026-09-27'
+
 tags:
 - Company
-apis: []
+- HomeTheater
+- Projectors
+- ECommerce
+- ConsumerElectronics
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/awolvision-llms.txt
+- type: WellKnown
+  url: well-known/awolvision-well-known.yml
+- type: Hosts
+  url: hosts/awolvision-hosts.yml
+- type: Vendors
+  url: vendors/awolvision-vendors.yml
+- type: TermsOfService
+  url: https://awolvision.com/pages/terms-of-service
+- type: Support
+  url: https://support.awolvision.com/hc/en-us
+- type: PrivacyPolicy
+  url: https://awolvision.com/policies/privacy-policy
+- type: Newsroom
+  url: https://awolvision.com/blogs/news
+- type: Blog
+  url: https://awolvision.com/blogs/blog
+- type: DomainSecurity
+  url: security/awolvision-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/awolvision
+  url: https://awolvision.com
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: The GraphQL endpoint appears to be a generic Shopify storefront API, not owned by Awolvision.
+  evidence:
+    - url: https://awolvision.com/api/graphql
+      status: 200
+  checked: 2026-09-27
+x-enrichment:
+  date: '2026-09-27'
+  status: enriched
+  artifacts_added: 9
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
